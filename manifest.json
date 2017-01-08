@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "WWA Player",
+  "version": "0.0.0",
+  "description": "WWA Player for Google Chrome/Chromium Browser.",
+  "options_page": "options.html",
+  "permissions":[
+    "tabs",
+    "notifications",
+    "storage",
+    "\u003Call_urls\u003E"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*", "file://*" ],
+      "js": [ "main.js" ]
+    }
+  ],
+  "browser_action": {
+    "default_title": "",
+    "default_icon": "icons/icon16.png",
+    "default_popup": "options.html"
+  },
+  "web_accessible_resources": [
+    "kari.gif",
+    "img/*.png",
+    "img/*.gif",
+    "img/*.jpg",
+    "icon/*.png",
+    "se/*.wav",
+    "se/*.mp3",
+    "se/*.ogg"
+  ],
+  "icons": {
+    "128": "icons/icon128.png",
+    "48": "icons/icon48.png",
+    "16": "icons/icon16.png"
+  }
+
+}
